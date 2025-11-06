@@ -1,0 +1,28 @@
+{
+  "name": "waveshare-ddsm-driver-hat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Node.js driver for Waveshare DDSM Driver HAT (A) with auto-connect and full motor control",
+  "main": "driver.js",
+  "scripts": {
+    "test": "node test.js",
+    "example": "node example.js"
+  },
+  "keywords": [
+    "waveshare",
+    "driver-hat",
+    "motor",
+    "raspberry-pi",
+    "i2c",
+    "robotics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "i2c-bus": "^5.2.3",
+    "serialport": "^10.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
