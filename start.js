@@ -10,6 +10,7 @@ var rover = {
     },
     SerialPort: require("serialport").SerialPort,
     Readline: require('@serialport/parser-readline').ReadlineParser,
+    ByteLengthParser: require('@serialport/parser-byte-length').ByteLengthParser,
     connect_to_waveshare: require("./lib/waveshare/connect_to_waveshare"),
     create_waveshare_message: require("./lib/waveshare/create_waveshare_message"),
 }
@@ -60,7 +61,7 @@ setTimeout(() => {
 // set heartbeat time (-1 disables automatic stop)
 setTimeout(() => {
     if (rover.waveshare.connected) {
-        var message = { "T": CMD_HEARTBEAT_TIME, "time": 60000 };
+        var message = { "T": CMD_HEARTBEAT_TIME, "time": 2000 };
         rover.create_waveshare_message(rover, message);
     } else {
         console.log("Waveshare not connected");
